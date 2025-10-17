@@ -1,4 +1,7 @@
+"use client"
+
 import Link from "next/link"
+import { motion } from "framer-motion"
 
 const events = [
   {
@@ -23,7 +26,8 @@ const events = [
     id: 2,
     name: "Singing & Dancing",
     slug: "singing-dancing",
-    duration: "Solo: 4min (Singing) | 4min (Dancing)\nGroup: 6min (Singing) | 7min (Dancing)",
+    duration:
+      "Solo: 4min (Singing) | 4min (Dancing)\nGroup: 6min (Singing) | 7min (Dancing)",
     icon: "🎭",
     themes: ["Freestyle & Fusion", "Folk & Contemporary", "Western & Classical", "Choliya, Nati, Jhora"],
     remarks: "Solo & Group categories available",
@@ -69,35 +73,76 @@ const events = [
 
 export default function EventsPage() {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950">
-      {/* Header */}
-      <section className="py-16 px-6 bg-gradient-to-r from-orange-600/20 to-red-600/20 border-b border-orange-400/20">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-400">
-            Cultural Events
-          </h1>
-          <p className="text-xl text-gray-300">Explore all the exciting events and showcase your talents</p>
-        </div>
-      </section>
+    <main
+      className="relative min-h-screen bg-slate-900"
+      style={{
+        backgroundImage: `url('/uttrakhand-bg.jpeg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70 backdrop-blur-[2px]" />
 
-      {/* Events Grid */}
-      <section className="py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {events.map((event) => (
-              <Link key={event.slug} href={`/events/${event.slug}`}>
-                <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 border border-orange-400/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 cursor-pointer h-full">
-                  <div className="text-5xl mb-4">{event.icon}</div>
-                  <h3 className="text-2xl font-bold text-orange-300 mb-2">{event.name}</h3>
-                  <p className="text-gray-300 mb-4">{event.description}</p>
-                  <p className="text-sm text-cyan-300 font-semibold">⏱️ {event.duration.split("\n")[0]}</p>
-                  <div className="mt-4 text-sm text-gray-400">Click to view details →</div>
-                </div>
-              </Link>
-            ))}
+      {/* Content Wrapper */}
+      <div className="relative z-10">
+        {/* Header */}
+        <section className="py-16 px-6 bg-gradient-to-r from-orange-600/20 to-red-600/20 border-b border-orange-400/20">
+          <motion.div
+            className="max-w-6xl mx-auto text-center"
+            initial={{ opacity: 0, y: -40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+          >
+            <h1 className="text-5xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-400">
+              Cultural Events
+            </h1>
+            <p className="text-xl text-gray-300">
+              Explore all the exciting events and showcase your talents
+            </p>
+          </motion.div>
+        </section>
+
+        {/* Events Grid */}
+        <section className="py-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {events.map((event, index) => (
+                <motion.div
+                  key={event.slug}
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{
+                    duration: 0.6,
+                    delay: index * 0.2,
+                  }}
+                  whileHover={{
+                    scale: 1.03,
+                    boxShadow: "0 0 25px rgba(34, 211, 238, 0.2)",
+                  }}
+                >
+                  <Link href={`/events/${event.slug}`}>
+                    <div className="bg-gradient-to-br from-slate-800/70 to-slate-900/70 border border-orange-400/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-300 cursor-pointer h-full backdrop-blur-sm">
+                      <div className="text-5xl mb-4">{event.icon}</div>
+                      <h3 className="text-2xl font-bold text-orange-300 mb-2">
+                        {event.name}
+                      </h3>
+                      <p className="text-gray-300 mb-4">{event.description}</p>
+                      <p className="text-sm text-cyan-300 font-semibold">
+                        ⏱️ {event.duration.split("\n")[0]}
+                      </p>
+                      <div className="mt-4 text-sm text-gray-400">
+                        Click to view details →
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   )
 }

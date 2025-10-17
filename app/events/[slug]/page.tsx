@@ -1,5 +1,7 @@
+"use client"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import React from "react"
 
 const events = [
   {
@@ -102,12 +104,24 @@ const events = [
   },
 ]
 
-export default function EventDetailPage({ params }: { params: { slug: string } }) {
-  const event = events.find((e) => e.slug === params.slug)
+export default function EventDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = React.use(params)
+
+  const event = events.find((e) => e.slug === slug)
 
   if (!event) {
     return (
-      <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 flex items-center justify-center">
+      <main className="min-h-screen relative flex items-center justify-center">
+        {/* Background Image */}
+        <div className="absolute inset-0 -z-10">
+          <img
+            src="/uttrakhand-bg.jpeg"
+            alt="Uttarakhand Celebration"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/75 to-slate-950/90" />
+        </div>
+
         <div className="text-center">
           <h1 className="text-4xl font-bold text-orange-400 mb-4">Event Not Found</h1>
           <Link href="/events">
@@ -119,9 +133,19 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950">
+    <main className="min-h-screen relative">
+      {/* Background Image */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="/uttrakhand-bg.jpeg"
+          alt="Uttarakhand Celebration"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/75 to-slate-950/90" />
+      </div>
+
       {/* Header */}
-      <section className="py-16 px-6 bg-gradient-to-r from-orange-600/20 to-red-600/20 border-b border-orange-400/20">
+      <section className="py-16 px-6 bg-gradient-to-r from-orange-600/20 to-red-600/20 border-b border-orange-400/20 backdrop-blur-sm">
         <div className="max-w-4xl mx-auto">
           <Link href="/events" className="text-cyan-400 hover:text-cyan-300 mb-4 inline-block">
             ← Back to Events
@@ -143,7 +167,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {/* Main Content */}
             <div className="md:col-span-2">
-              <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 border border-orange-400/30 rounded-2xl p-8 mb-8">
+              <div className="bg-slate-800/50 backdrop-blur-md border border-orange-400/30 rounded-2xl p-8 mb-8">
                 <h2 className="text-2xl font-bold text-orange-300 mb-4">About This Event</h2>
                 <p className="text-gray-300 leading-relaxed mb-6">{event.fullDescription}</p>
 
@@ -173,7 +197,7 @@ export default function EventDetailPage({ params }: { params: { slug: string } }
 
             {/* Sidebar */}
             <div>
-              <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 border border-orange-400/30 rounded-2xl p-6 sticky top-24">
+              <div className="bg-slate-800/50 backdrop-blur-md border border-orange-400/30 rounded-2xl p-6 sticky top-24">
                 <h3 className="text-xl font-bold text-orange-300 mb-6">Event Details</h3>
 
                 <div className="space-y-6">
