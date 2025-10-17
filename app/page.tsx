@@ -138,7 +138,22 @@ export default function Home() {
           >
             "Enhancing Social and Cultural Skills"
           </motion.p>
-
+           <motion.p
+            className="text-lg text-yellow-300 font-semibold mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+          >
+            🏆 Winners will get a chance to participate in the State Level Competition at Dehradun — with a grand prize of ₹1,00,000!
+          </motion.p>
+           <motion.p
+            className="text-lg text-red-500 font-semibold mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+          >
+            📅 Last date of registration: <span className="underline font-bold">24/10/2025</span>
+          </motion.p>
           <motion.p
             className="text-lg text-gray-300 mb-8"
             initial={{ opacity: 0, y: 20 }}

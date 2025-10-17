@@ -19,6 +19,8 @@ export function Footer() {
              <p className="text-gray-400 text-sm">
               Ayush Saini, Mob-7417089755 <br />
               Bhumi Pandey, Mob-6395667502 <br />
+              Mukul Pandey, Mob-7983074088 <br/>
+              Ankita bhoj, Mob-8218435916 <br/>
               </p>
           </div>
         </div>

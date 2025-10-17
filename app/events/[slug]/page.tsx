@@ -18,7 +18,7 @@ const events = [
       "Harmony between Nature & Humanity",
       "Spirit of Devbhoomi",
     ],
-    remarks: "A3 sheet & chart paper",
+    remarks: "Only A3 sheets & chart paper will be provided. All other materials must be brought by the participants.",
     description:
       "Express your artistic vision through sketching. Showcase your creativity with themes centered around Uttarakhand's rich cultural heritage and natural beauty.",
     fullDescription:
@@ -37,7 +37,7 @@ const events = [
     duration: "Solo: 4min (Singing) | 4min (Dancing)\nGroup: 6min (Singing) | 7min (Dancing)",
     icon: "🎭",
     themes: ["Freestyle & Fusion", "Folk & Contemporary", "Western & Classical", "Choliya, Nati, Jhora"],
-    remarks: "Solo & Group categories available",
+    remarks: " Songs for dance performances must be submitted before 30/10/2025.",
     description:
       "Perform your best in singing or dancing. Both solo and group categories are available with flexible time limits.",
     fullDescription:
