@@ -20,7 +20,7 @@ export function Footer() {
               Ayush Saini, Mob-7417089755 <br />
               Bhumi Pandey, Mob-6395667502 <br />
               Mukul Pandey, Mob-7983074088 <br/>
-              Chandraditya Sati, Mob-9410959664
+              Chandraditya Sati, Mob-9410959664 <br/>
               Ankita bhoj, Mob-8218435916 <br/>
               </p>
           </div>
