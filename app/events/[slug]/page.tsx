@@ -211,6 +211,7 @@ export default function EventDetailPage({ params }: { params: Promise<{ slug: st
                     <p className="text-cyan-300 font-semibold">{event.remarks}</p>
                   </div>
 
+                  <div className="text-red-500">Note: Last date of registration- 24/10/2025</div>
                   <Link href="/register" className="w-full">
                     <Button className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold py-3 rounded-xl">
                       Register for This Event

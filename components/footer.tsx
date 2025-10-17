@@ -17,6 +17,10 @@ export function Footer() {
           <div>
             <h3 className="text-orange-400 font-bold mb-4">Contact</h3>
             <p className="text-gray-400 text-sm">For queries, reach out to the organizing committee.</p>
+             <p className="text-gray-400 text-sm">
+              Ayush Saini, Mob-7417089755 <br />
+              Bhumi Pandey, Mob-6395667502 <br />
+              </p>
           </div>
         </div>
         <div className="border-t border-slate-700 pt-8 text-center text-gray-500 text-sm">
