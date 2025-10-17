@@ -16,7 +16,12 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-orange-400 font-bold mb-4">Contact</h3>
-            <p className="text-gray-400 text-sm">For queries, reach out to the organizing committee.</p>
+            <p className="text-gray-400 text-sm">Student Coordinators:
+              <br />
+              Chandraditya Sati (+91 94109 59664) | <br />
+              Mukul Pandey (+91 79830 74088) | <br />
+              Ankita Bhoj (+91 82184 35916) | <br />
+              </p>
           </div>
         </div>
         <div className="border-t border-slate-700 pt-8 text-center text-gray-500 text-sm">
