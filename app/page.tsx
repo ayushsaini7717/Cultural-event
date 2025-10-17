@@ -8,10 +8,6 @@ export default function Home() {
     <main className="min-h-screen relative">
       {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <img
-          src="/uttarakhand-bg.jpeg"
-          className="w-full h-full object-cover"
-        />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-900/85 via-slate-900/75 to-slate-950/90" />
       </div>
 

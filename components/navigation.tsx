@@ -21,8 +21,9 @@ export function Navigation() {
         <div className="flex justify-between items-center">
           <Link
             href="/"
-            className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-400"
+            className="flex justify-center items-center gap-2 text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-400"
           >
+            <img height={50} width={50} src={'/btkitLOGO.png'}/>
             BTKIT Dwarahat
           </Link>
 
