@@ -16,11 +16,9 @@ export function Footer() {
           </div>
           <div>
             <h3 className="text-orange-400 font-bold mb-4">Contact</h3>
-            <p className="text-gray-400 text-sm">Student Coordinators:
-              <br />
-              Chandraditya Sati (+91 94109 59664) | <br />
-              Mukul Pandey (+91 79830 74088) | <br />
-              Ankita Bhoj (+91 82184 35916) | <br />
+            <p className="text-gray-400 text-sm">
+              Ayush Saini (+91 74170 89755) | <br />
+              Bhumi Pandey (+91 63956 67502) | <br />
               </p>
           </div>
         </div>
