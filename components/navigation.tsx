@@ -23,7 +23,7 @@ export function Navigation() {
             href="/"
             className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-orange-400"
           >
-            Devbhoomi
+            BTKIT Dwarahat
           </Link>
 
           {/* Desktop Menu */}
