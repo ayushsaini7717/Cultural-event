@@ -12,7 +12,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 export const metadata: Metadata = {
   title: "Silver Jubilee Celebration - Uttarakhand Foundation Day",
   description: "Join us in celebrating Uttarakhand's vibrant traditions through cultural events and performances.",
-  generator: "v0.app",
+  generator: "Ayush Saini",
 }
 
 export default function RootLayout({
