@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import { link } from "fs"
 
 export default function Home() {
   return (
@@ -74,12 +75,12 @@ export default function Home() {
           <h2 className="text-4xl font-bold text-center mb-12 text-orange-300">Featured Events</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { name: "Sketching", icon: "🎨", desc: "Express your creativity through art" },
-              { name: "Singing & Dancing", icon: "🎭", desc: "Showcase your performance skills" },
-              { name: "Photography & Filmmaking", icon: "📸", desc: "Capture the essence of culture" },
-              { name: "Music Band", icon: "🎵", desc: "Group musical performances" },
+              { name: "Sketching", icon: "🎨", desc: "Express your creativity through art" , link: '/events/sketching'},
+              { name: "Singing & Dancing", icon: "🎭", desc: "Showcase your performance skills", link: '/events/singing-dancing' },
+              { name: "Photography & Filmmaking", icon: "📸", desc: "Capture the essence of culture" , link: '/events/photography-filmmaking'},
+              { name: "Music Band", icon: "🎵", desc: "Group musical performances", link: '/events/music-band'},
             ].map((event) => (
-              <Link key={event.name} href={`/events/${event.name.toLowerCase().replace(/\s+/g, "-")}`}>
+              <Link key={event.name} href={event.link}>
                 <div className="bg-slate-800/50 backdrop-blur-md border border-orange-400/30 rounded-2xl p-8 hover:border-cyan-400/60 transition-all duration-300 hover:shadow-xl hover:shadow-cyan-500/20 cursor-pointer">
                   <div className="text-5xl mb-4">{event.icon}</div>
                   <h3 className="text-2xl font-bold text-orange-300 mb-2">{event.name}</h3>
