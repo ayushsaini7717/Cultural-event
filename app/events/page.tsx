@@ -28,7 +28,7 @@ const events = [
     slug: "singing-dancing",
     duration:
       "Solo: 4min (Singing) | 4min (Dancing)\nGroup: 6min (Singing) | 7min (Dancing)",
-    icon: "🎭",
+    icon: "𝄞 🕺",
     themes: ["Freestyle & Fusion", "Folk & Contemporary", "Western & Classical", "Choliya, Nati, Jhora"],
     remarks: "Solo & Group categories available",
     description:

@@ -55,7 +55,7 @@ export default function Home() {
 
   const events = [
     { name: "Sketching", icon: "🎨", desc: "Express your creativity through art", link: '/events/sketching' },
-    { name: "Singing & Dancing", icon: "🎭", desc: "Showcase your performance skills", link: '/events/singing-dancing' },
+    { name: "Singing & Dancing", icon: "𝄞 🕺", desc: "Showcase your performance skills", link: '/events/singing-dancing' },
     { name: "Photography & Filmmaking", icon: "📸", desc: "Capture the essence of culture", link: '/events/photography-filmmaking' },
     { name: "Music Band", icon: "🎵", desc: "Group musical performances", link: '/events/music-band' },
   ]
